@@ -20,6 +20,6 @@ class FloatType implements IDataType, IAddable
 
     public function sum(IDataType $data) : IDataType
     {
-        return new FloatType($data->getValue() + $this->value);
+        return new FloatType($this->getValue() + $data->getValue());
     }
 }

@@ -20,6 +20,6 @@ class StringType implements IDataType, IAddable
 
     public function sum(IDataType $data) : IDataType
     {
-        return new StringType($this->value . $data->getValue());
+        return new StringType($this->getValue() . $data->getValue());
     }
 }

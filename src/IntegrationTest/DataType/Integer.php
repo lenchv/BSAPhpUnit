@@ -19,6 +19,6 @@ class Integer implements IDataType, IAddable
 
     public function sum(IDataType $type): IDataType
     {
-        return new Integer($type->getValue() + $this->value);
+        return new Integer($this->getValue() + $type->getValue());
     }
 }
