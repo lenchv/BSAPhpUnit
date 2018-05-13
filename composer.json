@@ -1,0 +1,25 @@
+{
+  "name": "BSA/PhpUnit",
+  "description": "Examples for lections of PhpUnit",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Lench Vladymyr",
+      "email": "volodymyr-lench@binary-studio.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "BSA\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "BSATests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "7.1.5"
+  }
+}
