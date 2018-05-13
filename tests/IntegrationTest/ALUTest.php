@@ -22,4 +22,11 @@ class ALUTest extends TestCase
         $b = new DataType\FloatType(2.25);
         $this->assertEquals(4.5, ALU::sum($a, $b));
     }
+
+    public function testSumString()
+    {
+        $a = new DataType\StringType("a");
+        $b = new DataType\StringType("b");
+        $this->assertEquals("ab", ALU::sum($a, $b));
+    }
 }
