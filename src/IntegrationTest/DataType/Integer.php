@@ -1,8 +1,9 @@
 <?php
 
 namespace BSA\IntegrationTest\DataType;
+use BSA\IntegrationTest\IAddable;
 
-class Integer implements IDataType
+class Integer implements IDataType, IAddable
 {
     private $value;
 
@@ -14,5 +15,10 @@ class Integer implements IDataType
     public function getValue() : int
     {
         return $this->value;
+    }
+
+    public function sum(IDataType $type): IDataType
+    {
+        return new Integer($type->getValue() + $this->value);
     }
 }

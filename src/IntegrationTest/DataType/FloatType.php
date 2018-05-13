@@ -2,7 +2,9 @@
 
 namespace BSA\IntegrationTest\DataType;
 
-class FloatType implements IDataType
+use BSA\IntegrationTest\IAddable;
+
+class FloatType implements IDataType, IAddable
 {
     private $value;
 
@@ -14,5 +16,10 @@ class FloatType implements IDataType
     public function getValue() : float
     {
         return $this->value;
+    }
+
+    public function sum(IDataType $data) : IDataType
+    {
+        return new FloatType($data->getValue() + $this->value);
     }
 }

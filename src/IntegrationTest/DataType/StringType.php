@@ -2,7 +2,9 @@
 
 namespace BSA\IntegrationTest\DataType;
 
-class StringType implements IDataType
+use BSA\IntegrationTest\IAddable;
+
+class StringType implements IDataType, IAddable
 {
     private $value;
 
@@ -14,5 +16,10 @@ class StringType implements IDataType
     public function getValue() : string
     {
         return $this->value;
+    }
+
+    public function sum(IDataType $data) : IDataType
+    {
+        return new StringType($this->value . $data->getValue());
     }
 }
