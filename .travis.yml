@@ -19,7 +19,7 @@ before_install:
 script:
     - docker-compose pull
     - docker-compose run --rm composer install
-    - docker-compose up --exit-code-from tests ./vendor/bin/phpunit
+    - docker-compose run --rm tests ./vendor/bin/phpunit
 
 branches:
     only:
