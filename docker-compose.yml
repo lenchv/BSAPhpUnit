@@ -1,0 +1,16 @@
+
+version: "2.1"
+
+services:
+  tests:
+    build: ./.docker/images/
+    volumes:
+      - ./:/app
+    working_dir: /app
+
+  composer:
+    restart: 'no'
+    image: composer:latest
+    volumes:
+        - $PWD:/app/
+        - $PWD/.composer:/composer
