@@ -28,7 +28,10 @@ before_deploy:
   - echo "Before deploy!"
 
 deploy:
-  - echo "Deploy"
+  provider: script
+  script: echo "Deploy"
+  on:
+    branch: travis_ci
 
 after_deploy:
   - echo "After deploy"
