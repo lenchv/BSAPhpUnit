@@ -8,6 +8,5 @@ class TestTest extends TestCase
     public function testTestFoo()
     {
         $this->assertEquals(true, Test::foo());
-        $this->assertNotEquals(false, Test::foo());
     }
 }
