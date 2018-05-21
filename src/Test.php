@@ -4,8 +4,8 @@ namespace BSA;
 
 class Test
 {
-    public static function foo() : bool
+    public static function foo($value) : bool
     {
-        return true;
+        return $value != $value;
     }
 }
