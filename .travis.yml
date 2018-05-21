@@ -34,7 +34,7 @@ deploy:
     branch: travis_ci
 
 after_deploy:
-  - cat ./file.txt
+  - echo "After deploy"
 
 after_script:
   - echo "After script!"
