@@ -4,10 +4,38 @@ language: php
 php:
   - 7.2
 
+before_install:
+  - echo "Before install script!"
+
+install:
+  - echo "Installation script!"
+
+before_script:
+  - echo "Before script!"
+
 script:
-    - composer install
-    - php vendor/bin/phpunit tests
+  - echo $TRAVIS_ENV_VAR
+  - composer install
+  - php vendor/bin/phpunit tests
+
+after_success:
+  - echo "success!!!"
+
+after_failure:
+  - echo "failure!!!"
+
+before_deploy:
+  - echo "Before deploy!"
+
+deploy:
+  - echo "Deploy"
+
+after_deploy:
+  - echo "After deploy"
+
+after_script:
+  - echo "After script!"
 
 branches:
-    only:
-        - travis_ci
+  only:
+    - travis_ci
