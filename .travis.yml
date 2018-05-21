@@ -29,7 +29,7 @@ before_deploy:
 
 deploy:
   provider: script
-  script: echo "Deploy"
+  script: deploy.sh
   on:
     branch: travis_ci
 
