@@ -39,3 +39,11 @@ after_script:
 branches:
   only:
     - travis_ci
+
+notifications:
+  slack: phpbsa:$SLACK_TOKEN
+  on_success: always
+  on_failure: always
+  template:
+    - "%{repository_slug} (%{commit}) : %{message} %{foo} "
+    - "Build details: %{build_url}"
