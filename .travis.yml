@@ -44,7 +44,7 @@ branches:
     - travis_ci
 
 notifications:
-  slack: phpbsa:$SLACK_TOKEN
+  slack: phpbsa:R4wvQRE9ZpV3pA3bcOVUj6Wj
   on_success: always
   on_failure: always
   template:
