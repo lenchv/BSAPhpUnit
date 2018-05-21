@@ -7,6 +7,7 @@ class TestTest extends TestCase
 {
     public function testTestFoo()
     {
-        $this->assertNotEquals(true, Test::foo(NAN));
+        $this->assertE    $this->assertNotEquals(true, Test::foo(NAN));
+        $this->assertNotEquals(false, Test::foo());
     }
 }
