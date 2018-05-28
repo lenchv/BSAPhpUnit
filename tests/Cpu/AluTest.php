@@ -6,10 +6,21 @@ use BSA\Cpu\Alu;
 
 final class AluTest extends TestCase
 {
-    public function testAdd()
+    /**
+     * @param int $a
+     * @param int $b
+     * @param int $s
+     *
+     * @testWith  [2, 3, 5]
+     *            [3, -3, 0]
+     */
+    public function testAdd($a, $b, $s)
     {
         $alu = new Alu();
 
-        $this->assertEquals(5, $alu->add(3, 2));
+        $this->assertEquals($s, $alu->add($a, $b));
     }
 }
+
+
+
