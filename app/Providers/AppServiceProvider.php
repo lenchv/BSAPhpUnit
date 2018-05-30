@@ -23,6 +23,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind(
+            'App\Repository\Contracts\ICarRepository',
+            'App\Repository\CarRepository'
+        );
+        $this->app->bind(
+            'App\Service\Contracts\ICarService',
+            'App\Service\CarService'
+        );
     }
 }
