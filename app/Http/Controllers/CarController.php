@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Entity\Car;
 use App\Request\CarRequest;
 use App\Service\Contracts\ICarService;
 use Illuminate\Http\Request;
