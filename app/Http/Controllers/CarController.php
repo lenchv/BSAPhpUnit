@@ -26,7 +26,7 @@ class CarController extends Controller
 
             $car = $this->carService->add($carRequest);
 
-            return response()->json($car);
+            return response()->json($car, 201);
         } catch (\Throwable $e) {
             return response()->json(["error" => $e->getMessage()], 400);
         }

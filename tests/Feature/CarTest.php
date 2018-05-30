@@ -19,7 +19,7 @@ class CarTest extends TestCase
         $response = $this->post('/api/car', $carData);
 
         $response
-            ->assertStatus(200)
+            ->assertStatus(201)
             ->assertJsonFragment($carData);
         $this->assertDatabaseHas('cars', array_merge(["id" => 1], $carData));
     }
