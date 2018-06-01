@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/car/new', function () {
+    return view('form');
+})->name('add_car');
