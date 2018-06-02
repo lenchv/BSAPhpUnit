@@ -24,7 +24,9 @@ class SecurityTest extends TestCase
         $doorMock->expects($this->once())
             ->method('close');
 
-        $security = new Security($windowMock, $doorMock);
+        $security = new Security();
+        $security->addClosable($doorMock)
+            ->addClosable($windowMock);
 
         $security->securityOn();
     }

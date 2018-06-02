@@ -7,18 +7,19 @@ use BSA\Contracts\IClosable;
 
 class Security
 {
-    private $door;
-    private $window;
+    private $closableEntities = [];
 
-    public function __construct(IClosable $door, IClosable $window)
+    public function addClosable(IClosable $entity) : Security
     {
-        $this->door = $door;
-        $this->window = $window;
+        $this->closableEntities[] = $entity;
+
+        return $this;
     }
 
     public function securityOn()
     {
-        $this->door->close();
-        $this->window->close();
+        foreach($this->closableEntities as $entity) {
+            $entity->close();
+        }
     }
 }
