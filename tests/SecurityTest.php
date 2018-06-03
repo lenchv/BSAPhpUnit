@@ -8,7 +8,7 @@ use BSA\Security;
 
 class SecurityTest extends TestCase
 {
-    public function testAverageGrades()
+    public function testSecurityOn()
     {
         $windowMock = $this->getMockBuilder(Window::class)
             ->setMethods(['close'])
