@@ -21,6 +21,7 @@ class ExampleTest extends DuskTestCase
                 ->type('model', '2000')
                 ->type('price', 12.2)
                 ->press('Add')
+                ->pause(1000)
                 ->assertSee('Success');
         });
     }
@@ -33,6 +34,7 @@ class ExampleTest extends DuskTestCase
                 ->type('model', '2000')
                 ->type('price', 12.2)
                 ->press('Add')
+                ->pause(1000)
                 ->assertSee('Error');
         });
     }
