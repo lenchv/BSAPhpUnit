@@ -52,4 +52,15 @@ class CarService implements ICarService
         $car = $this->cars->getById($id);
         $this->cars->delete($car);
     }
+
+    public function getTheCheapestCar() : ?Car
+    {
+        $cars = $this->getAll();
+
+        return array_reduce($cars, function ($theCheapest, $car) {
+            return ($car->price < $theCheapest->price)
+                ? $car
+                : $theCheapest;
+        }, $cars[0]);
+    }
 }

@@ -12,4 +12,5 @@ interface ICarService
     public function getById(int $id) : Car;
     public function update(int $id, ICarRequest $carRequest) : Car;
     public function delete(int $id);
+    public function getTheCheapestCar() : ?Car;
 }
