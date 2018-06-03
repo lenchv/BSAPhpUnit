@@ -25,10 +25,10 @@ class CarServiceTest extends TestCase
                     "price" => 3.2
                 ]),
                 factory(Car::class)->make([
-                    "price" => 2.2
+                    "price" => 1.0
                 ]),
                 factory(Car::class)->make([
-                    "price" => 1.0
+                    "price" => 2.2
                 ])
             ]);
 
