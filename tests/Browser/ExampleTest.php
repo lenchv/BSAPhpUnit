@@ -16,7 +16,7 @@ class ExampleTest extends DuskTestCase
     public function testCreationOfCar()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit(route('add_car'))
+            $browser->visit('/car/new')
                 ->type('brand', 'Mercedes')
                 ->type('model', '2000')
                 ->type('price', 12.2)
@@ -29,7 +29,7 @@ class ExampleTest extends DuskTestCase
     public function testFailedCreationOfCar()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit(route('add_car'))
+            $browser->visit('/car/new')
                 ->type('brand', '')
                 ->type('model', '2000')
                 ->type('price', 12.2)
