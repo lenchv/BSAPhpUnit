@@ -1,28 +1,52 @@
 sudo: required
 
 language: php
-
-services:
-    - docker
-
-env:
-    - DOCKER_COMPOSE_VERSION=1.14.0
-
-cache:
-    directories:
-        - .composer/
+php:
+  - 7.2
 
 before_install:
-    - sudo rm /usr/local/bin/docker-compose
-    - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
-    - chmod +x docker-compose
-    - sudo mv docker-compose /usr/local/bin
+  - echo "Before install script!"
+
+install:
+  - echo "Installation script!"
+
+before_script:
+  - echo "Before script!"
 
 script:
-    - docker-compose pull
-    - docker-compose run --rm composer install
-    - docker-compose run --rm tests ./vendor/bin/phpunit
+  - echo $TRAVIS_ENV_VAR
+  - composer install
+  - php vendor/bin/phpunit tests
+
+after_success:
+  - echo "success!!!"
+
+after_failure:
+  - echo "failure!!!"
+
+before_deploy:
+  - echo "Before deploy!"
+
+deploy:
+  provider: script
+  script: echo "Deploy!!!"
+  on:
+    branch: travis_ci
+
+after_deploy:
+  - echo "After deploy"
+
+after_script:
+  - echo "After script!"
 
 branches:
-    only:
-        - master
+  only:
+    - travis_ci
+
+notifications:
+  slack: phpbsa:R4wvQRE9ZpV3pA3bcOVUj6Wj
+  on_success: always
+  on_failure: always
+  template:
+    - "%{repository_slug} (%{commit}) : %{message} %{foo} "
+    - "Build details: %{build_url}"

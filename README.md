@@ -1,4 +1,6 @@
 # BSAPhpUnit
+[![Build Status](https://travis-ci.com/lenchv/BSAPhpUnit.svg?branch=travis_ci)](https://travis-ci.com/lenchv/BSAPhpUnit)
+<br>
 
 Table contents:
 - [Config TravisCI](https://github.com/lenchv/BSAPhpUnit/tree/travis_ci)
