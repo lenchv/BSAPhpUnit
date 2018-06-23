@@ -1,7 +1,7 @@
 # BSAPhpUnit
 
 Table contents:
-- [Config TravisCI](https://github.com/lenchv/BSAPhpUnit/tree/travis-ci)
+- [Config TravisCI](https://github.com/lenchv/BSAPhpUnit/tree/travis_ci)
     - [.travis.yml](https://github.com/lenchv/BSAPhpUnit/blob/travis_ci/.travis.yml)
     - [Correct PR](https://github.com/lenchv/BSAPhpUnit/pull/10)
     - [Incorrect PR](https://github.com/lenchv/BSAPhpUnit/pull/7)
