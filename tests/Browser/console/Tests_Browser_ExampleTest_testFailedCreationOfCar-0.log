@@ -1,8 +1,0 @@
-[
-    {
-        "level": "SEVERE",
-        "message": "http:\/\/localhost:8000\/api\/car - Failed to load resource: the server responded with a status of 400 (Bad Request)",
-        "source": "network",
-        "timestamp": 1527887408771
-    }
-]
